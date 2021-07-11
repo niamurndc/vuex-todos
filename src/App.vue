@@ -1,32 +1,54 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <div class="nav">
+        <router-link class="brand-title" to="/">State App</router-link> 
+        <router-link class="btn" to="/about">Create New</router-link>
+      </div>
+      <div class="container">
+        <router-view/>
+      </div>
+      
     </div>
-    <router-view/>
-  </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  #app{
+    background-color: #ff5e14;
+    min-height: 100vh;
+    font-family: monospace;
+  }
 
-#nav {
-  padding: 30px;
-}
+  .nav{
+    background-color: #fff;
+    color: #ff5e14;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  .brand-title{
+    color: #ff5e14;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: monospace;
+  }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  .btn{
+    background-color: #ff5e14;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+
+  }
+
+  .container{
+    width: 900px;
+    margin: 0 auto;
+  }
 </style>
